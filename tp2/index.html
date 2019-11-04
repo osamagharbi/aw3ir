@@ -10,24 +10,39 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
+        
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="formulaire.js"></script>
     </head>
-    <body>        
-        <h1>tp2</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+    <body>  
+		<h1>Saisie d'une fiche "Personne"</h1>
+		<div id="main-div">
+		<form>
+		<table>
+			<tr>
+				<td>Nom:</td> <td><input type="text" minlength="5" maxlength="20" name="nom" id="nom"></td>
+			</tr>
+			<tr>
+				<td>Prénom:</td> <td><input type="text" minlength="5" maxlength="20"name="prenom" id="prenom"></td>
+			</tr>
+			<tr>
+				<td>Date de naissance:</td> <td><input type="date" name="date" id="date"></td>
+			</tr>
+			<tr>
+				<td>Adresse:</td> <td><input type="text" minlength="5" maxlength="50" name="adresse" id="adresse"></td>
+			</tr>
+			<tr>
+				<td>Mail:</td> <td><input type="email" minlength="5" maxlength="30" name="email" id="email"></td>
+			</tr>
+			<tr>
+				<td></td><td><input type="button" value="valider" onclick="validation()"></td>
+			</tr>
+		</table>
+		<div id="message-div"></div>
+		</div>
+		</div>
+        
     </body>
 </html>
