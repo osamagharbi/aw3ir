@@ -18,8 +18,12 @@ function validation(){
 		
 	}
 	else{
-		
 		div.id = 'error';
+		/*if(length_nom < 5){document.getElementById("error").innerHTML = "<p>Le champ Nom est obligatoire<br>Minumum 5 characteres</p>";}
+		if(length_prenom < 5){document.getElementById("error").innerHTML = "<p>Le champ Prénom est obligatoire<br>Minumum 5 characteres</p>";}
+		if(length_date < 5){document.getElementById("error").innerHTML = "<p>Le champ Date est obligatoire</p>";}
+		if(length_adresse < 5){document.getElementById("error").innerHTML = "<p>Le champ Adresse est obligatoire<br>Minumum 5 characteres</p>";}
+		if(length_email < 5){document.getElementById("error").innerHTML = "<p>Le champ Email est obligatoire<br>Minumum 5 characteres</p>";}*/
 		document.getElementById("error").innerHTML = "<p>Verifier les information entrées</p>";
 		
 	}
