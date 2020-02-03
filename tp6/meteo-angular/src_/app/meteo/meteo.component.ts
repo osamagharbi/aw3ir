@@ -6,6 +6,7 @@ import { MeteoItem } from '../meteoItem';
   templateUrl: './meteo.component.html',
   styleUrls: ['./meteo.component.css']
 })
+
 export class MeteoComponent implements OnInit {
 
   city: MeteoItem = {

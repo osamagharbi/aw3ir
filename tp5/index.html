@@ -29,10 +29,10 @@
         <!-- Add your site or application content here -->
         <p>Hello world! This is HTML5 Boilerplate.</p>
         <img src="../galilee.png" alt="Logo Galilee"/>
-        <div id="weatherApp">
 
-        </div>
-        <!-- formulaire de saisie de ville -->
+        <div id="weatherApp">
+            <!-- ici votre code HTML utilisé par VUE -->
+            <!-- formulaire de saisie de ville -->
 <form v-on:submit="addCity">
     <div class="input-group">
         <input type="search" class="form-control" v-model="formCityName" placeholder="Search for..." aria-label="Search for..." autofocus required>
@@ -48,8 +48,24 @@
 
     <div class="alert alert-danger" role="alert" v-if='messageForm != ""'>
         {{messageForm}}
-    </div>                
+    </div> 
+    this.messageForm = 'existe déjà';               
 </form>
 <!-- fin: formulaire de saisie de ville -->
+<!-- Listing des villes, boucle sur l'array : cityList -->
+<h4>Liste des villes ({{cityList.length}})</h4>
+<ul class="list-group">
+    <a v-for="city in cityList" v-on:click="meteo(city)" class="list-group-item d-flex justify-content-between align-items-center">
+        {{city.name}}
+        <button v-on:click="remove(city)" class="btn btn-secondary btn-sm" title="Supprimer de la liste">&times;</button>
+    </a>
+</ul>
+
+<div class="alert alert-primary" role="alert" v-if="cityList.length==0">
+    Aucune ville de saisie!
+</div>
+
+<!-- fin : Listing des villes -->
+        </div>
     </body>
 </html>

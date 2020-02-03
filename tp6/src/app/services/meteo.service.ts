@@ -44,7 +44,7 @@ export class MeteoService {
 
     let m = new MeteoItem();
 
-    return fetch('https://api.openweathermap.org/data/2.5/forecast/?q=' + name +'&lang=fr&units=metric&appid=0ada432b59deb9716c357092c5f79be6')
+    return fetch('https://api.openweathermap.org/data/2.5/forecast/?q=' + name +'&lang=fr&appid=0ada432b59deb9716c357092c5f79be6')
       .then(function (response) {
         return response.json();
       })

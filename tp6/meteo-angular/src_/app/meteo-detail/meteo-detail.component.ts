@@ -13,7 +13,6 @@ import { DatePipe } from '@angular/common';
 export class MeteoDetailComponent implements OnInit {
 
   meteo : any;
-  forcast : any;
 
   constructor(
     private route: ActivatedRoute,
@@ -31,10 +30,6 @@ export class MeteoDetailComponent implements OnInit {
     this.meteoService.getMeteo(name)
       .then(meteo => this.meteo = meteo)
       .catch(fail => this.meteo = fail);
-
-    this.meteoService.getForcast(name)
-      .then(forcast => this.forcast = forcast)
-      .catch(fail => this.forcast = fail);
   }
 
 }

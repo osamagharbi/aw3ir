@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- app.component.html -->\r\n\r\n<div class=\"container\">\r\n\r\n    <!-- menu du haut de page -->\r\n    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\r\n      <a class=\"navbar-brand\" routerLink=\"/\">Météo avec Angular</a>\r\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\"\r\n        aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n      <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\r\n        <ul class=\"navbar-nav\">\r\n          <li class=\"nav-item active\">\r\n            <a class=\"nav-link\" routerLink=\"/\">Accueil\r\n              <span class=\"sr-only\">(current)</span>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </nav>\r\n    <!-- fin : menu du haut de page -->\r\n  \r\n    <!--The content below is only a placeholder and can be replaced.-->\r\n    <div>\r\n\r\n\r\n\r\n\r\n<h1>\r\n    Welcome to {{ title }}!\r\n</h1>\r\n<!-- <app-meteo></app-meteo> -->\r\n<router-outlet></router-outlet>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n\n  <!-- menu du haut de page -->\n  <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n    <a class=\"navbar-brand\" routerLink=\"/\">Météo avec Angular</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\"\n      aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item active\">\n          <a class=\"nav-link\" routerLink=\"/\">Accueil\n            <span class=\"sr-only\">(current)</span>\n          </a>\n        </li>\n      </ul>\n    </div>\n  </nav>\n  <!-- fin : menu du haut de page -->\n\n  <!--The content below is only a placeholder and can be replaced.-->\n  <div>\n    <h1>\n      Welcome to {{ title }}!\n    </h1>\n    <!-- <app-meteo></app-meteo> -->\n    <router-outlet></router-outlet>\n  </div>\n\n</div>");
 
 /***/ }),
 
@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- meteo de la ville selectionnée -->\n<!-- meteo de la ville selectionnée -->\n<div *ngIf=\"meteo && meteo.cod === 200\">\n\n    <nav aria-label=\"breadcrumb\">\n      <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\">\n          <a routerLink=\"/\">🏠</a>\n        </li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\">Météo pour {{meteo.name}}</li>\n      </ol>\n    </nav>\n  \n    <div class=\"card\" style=\"width:300px; margin: 0 auto\" v-if=\"meteo\">\n      <div class=\"card-header\">\n        {{meteo.name}} @{{meteo.dt | date:'H:mm'}}\n      </div>\n      <img class=\"card-img-top\" src=\"https://maps.googleapis.com/maps/api/staticmap?markers={{meteo.coord.lat}},{{meteo.coord.lon}}&zoom=5&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg\"\n        alt=\"Card image cap\">\n      <div class=\"card-body\">\n        <h5 class=\"card-title\">\n          <i v-bind:class=\"'wi wi-owm-day-'+meteo.weather[0].id\"></i>\n          {{meteo.main.temp}}\n          <i class=\"wi wi-celsius\"></i>\n        </h5>\n        <p class=\"card-text\">{{meteo.weather[0].description}}</p>\n      </div>\n      <ul class=\"list-group list-group-flush\">\n        <li class=\"list-group-item\">\n          <i class=\"wi wi-cloud\"></i> Nuage: {{meteo.clouds.all}}%\n        </li>\n        <li class=\"list-group-item\">\n          <i class=\"wi wi-humidity\"></i> Humidité: {{meteo.main.humidity}}%\n        </li>\n        <li class=\"list-group-item\">\n          <i class=\"wi wi-windy\"></i> Vent: {{meteo.wind.speed}} km/h\n        </li>\n        <li class=\"list-group-item\">\n          <i class=\"wi wi-sunrise\"></i> Levé du soleil: {{meteo.sys.sunrise}} // Date au format Timestamp à transformer au format 'H:mm'\n        </li>\n        <li class=\"list-group-item\">\n          <i class=\"wi wi-sunset\"></i>Couché du soleil: {{meteo.sys.sunset}} // Date au format Timestamp à transformer au format 'H:mm'\n        </li>\n      </ul>\n    </div>\n  </div>\n  \n  <div class=\"alert alert-danger\" *ngIf=\"meteo && meteo.cod !== 200\">\n  \n    {{meteo.message}} (erreur {{meteo.cod}})\n  </div>\n  \n  \n  <hr> {{meteo | json}}");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- meteo de la ville selectionnée -->\n<!-- meteo de la ville selectionnée -->\n<div *ngIf=\"meteo && meteo.cod === 200\">\n\n  <nav aria-label=\"breadcrumb\">\n    <ol class=\"breadcrumb\">\n      <li class=\"breadcrumb-item\">\n        <a routerLink=\"/\">🏠</a>\n      </li>\n      <li class=\"breadcrumb-item active\" aria-current=\"page\">Météo pour {{meteo.name}}</li>\n    </ol>\n  </nav>\n\n  <div class=\"card\" style=\"width:300px; margin: 0 auto\" v-if=\"meteo\">\n    <div class=\"card-header\">\n      {{meteo.name}} @{{meteo.dt | date:'H:mm'}}\n    </div>\n    <img class=\"card-img-top\" src=\"https://maps.googleapis.com/maps/api/staticmap?markers={{meteo.coord.lat}},{{meteo.coord.lon}}&zoom=5&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg\"\n      alt=\"Card image cap\">\n    <div class=\"card-body\">\n      <h5 class=\"card-title\">\n        <i v-bind:class=\"'wi wi-owm-day-'+meteo.weather[0].id\"></i>\n        {{meteo.main.temp}}\n        <i class=\"wi wi-celsius\"></i>\n      </h5>\n      <p class=\"card-text\">{{meteo.weather[0].description}}</p>\n    </div>\n    <ul class=\"list-group list-group-flush\">\n      <li class=\"list-group-item\">\n        <i class=\"wi wi-cloud\"></i> Nuage: {{meteo.clouds.all}}%\n      </li>\n      <li class=\"list-group-item\">\n        <i class=\"wi wi-humidity\"></i> Humidité: {{meteo.main.humidity}}%\n      </li>\n      <li class=\"list-group-item\">\n        <i class=\"wi wi-windy\"></i> Vent: {{meteo.wind.speed}} km/h\n      </li>\n      <li class=\"list-group-item\">\n        <i class=\"wi wi-sunrise\"></i> Levé du soleil: {{meteo.sys.sunrise | date:'H:mm'}}\n      </li>\n      <li class=\"list-group-item\">\n        <i class=\"wi wi-sunset\"></i> Couché du soleil: {{meteo.sys.sunset | date:'H:mm'}}\n      </li>\n    </ul>\n  </div>\n</div>\n\n<div class=\"alert alert-danger\" *ngIf=\"meteo && meteo.cod !== 200\">\n\n  {{meteo.message}} (erreur {{meteo.cod}})\n</div>\n\n<h5>Les prochains 5 jours</h5>\n<div *ngIf=\"forcast && forcast.cod == '200'\"  class=\"card-deck\">\n\t\n\t<div class=\"card\" *ngFor=\"let item of forcast.list; index as i; trackBy: trackByFn\">\n\t\t<div class=\"card-header\">\n\t      {{item.dt_txt | date:'EEEE'}}\n\t    </div>\n\t\t<div class=\"card-body\">\n\t      <h5 class=\"card-title\">\n\t        <i v-bind:class=\"'wi wi-owm-day-'+meteo.weather[0].id\"></i>\n\t        {{item.main.temp}}\n\t        <i class=\"wi wi-celsius\"></i>\n\t      </h5>\n\t      <p class=\"card-text\">{{item.weather[0].description}}</p>\n\t    </div>\n\t    <ul class=\"list-group list-group-flush\">\n\t      <li class=\"list-group-item\">\n\t        <i class=\"wi wi-cloud\"></i> Nuage: {{item.clouds.all}}%\n\t      </li>\n\t      <li class=\"list-group-item\">\n\t        <i class=\"wi wi-humidity\"></i> Humidité: {{item.main.humidity}}%\n\t      </li>\n\t      <li class=\"list-group-item\">\n\t        <i class=\"wi wi-windy\"></i> Vent: {{item.wind.speed}} km/h\n\t      </li>\n\t    </ul>\n\t</div>\n</div>\n\n\n<div class=\"alert alert-danger\" *ngIf=\"forcast && forcast.cod != '200'\">\n\t\n  {{forcast.message}} (erreur {{forcast.cod}})\n\n</div>\n\n\n<hr> <!-- {{meteo | json}} -->");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--app\\meteo\\meteo.component.html-->\r\n<nav aria-label=\"breadcrumb\">\r\n    <ol class=\"breadcrumb\">\r\n      <li class=\"breadcrumb-item active\" aria-current=\"page\">🏠</li>\r\n    </ol>\r\n  </nav>\r\n  \r\n   <form (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"input-group\">\r\n      <input type=\"search\" placeholder=\"Ville ...\" id=\"name\" name=\"name\" \r\n          class=\"form-control\" required minlength=\"3\"\r\n          [(ngModel)]=\"city.name\" #name=\"ngModel\">\r\n  \r\n      <span class=\"input-group-btn\">\r\n        <button class=\"btn btn-primary\" type=\"submit\" [disabled]=\"!name.valid\">Go!</button>\r\n      </span>\r\n    </div>\r\n    <small *ngIf=\"city.name\" class=\"text-muted\">\r\n      {{city.name.length}} caractères\r\n    </small>\r\n  \r\n    <div *ngIf=\"name.invalid && (name.dirty || name.touched)\" class=\"alert alert-danger\">\r\n  \r\n      <div *ngIf=\"name.errors.required\">\r\n        La saisie de la ville est obligatoire\r\n      </div>\r\n      <div *ngIf=\"name.errors.minlength\">\r\n        Doit contenit au moins 3 caratères.\r\n      </div>\r\n    </div>\r\n  </form>\r\n  <hr/>\r\n\r\n<!-- Listing des villes, boucle sur l'array : cityList -->\r\n<h4>Liste des villes ({{cityList.length}})</h4>\r\n<ul class=\"list-group\">\r\n  <li *ngFor=\"let city of cityList\"  class=\"list-group-item d-flex justify-content-between align-items-center\">\r\n    <a  routerLink=\"/meteo/{{city.name}}\" class=\"d-block w-100\">\r\n      {{city.name}}    \r\n    </a>\r\n    <button (click)=\"remove(city)\" class=\"btn btn-secondary btn-sm pull-right\" title=\"Supprimer de la liste\">&times;</button>\r\n  </li>\r\n</ul>\r\n\r\n<div class=\"alert alert-primary\" role=\"alert\" *ngIf=\"cityList.length==0\">\r\n  Aucune ville de saisie!\r\n</div>\r\n\r\n\r\n<hr/>\r\n<p>\r\n  Utilisation du filtrer\r\n  <strong>json</strong> pour afficher le contenu de la variable\r\n  <strong>cityList</strong>\r\n</p>\r\n<pre>\r\n{{cityList | json}}\r\n</pre>\r\n\r\n<!-- fin : Listing des villes -->\r\n\r\n<hr>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--app\\meteo\\meteo.component.html-->\n<nav aria-label=\"breadcrumb\">\n  <ol class=\"breadcrumb\">\n    <li class=\"breadcrumb-item active\" aria-current=\"page\">🏠</li>\n  </ol>\n</nav>\n\n <form (ngSubmit)=\"onSubmit()\">\n  <div class=\"input-group\">\n    <input type=\"search\" placeholder=\"Ville ...\" id=\"name\" name=\"name\" \n        class=\"form-control\" required minlength=\"3\"\n        [(ngModel)]=\"city.name\" #name=\"ngModel\">\n\n    <span class=\"input-group-btn\">\n      <button class=\"btn btn-primary\" type=\"submit\" [disabled]=\"!name.valid\">Go!</button>\n    </span>\n  </div>\n  <small *ngIf=\"city.name\" class=\"text-muted\">\n    {{city.name.length}} caractères\n  </small>\n\n  <div *ngIf=\"name.invalid && (name.dirty || name.touched)\" class=\"alert alert-danger\">\n\n    <div *ngIf=\"name.errors.required\">\n      La saisie de la ville est obligatoire\n    </div>\n    <div *ngIf=\"name.errors.minlength\">\n      Doit contenit au moins 3 caratères.\n    </div>\n  </div>\n</form>\n\n<hr/>\n\n<!-- Listing des villes, boucle sur l'array : cityList -->\n<h4>Liste des villes ({{cityList.length}})</h4>\n<ul class=\"list-group\">\n  <li *ngFor=\"let city of cityList\"  class=\"list-group-item d-flex justify-content-between align-items-center\">\n    <a  routerLink=\"/meteo/{{city.name}}\" class=\"d-block w-100\">\n      {{city.name}}    \n    </a>\n    <button (click)=\"remove(city)\" class=\"btn btn-secondary btn-sm pull-right\" title=\"Supprimer de la liste\">&times;</button>\n  </li>\n</ul>\n\n<div class=\"alert alert-primary\" role=\"alert\" *ngIf=\"cityList.length==0\">\n  Aucune ville de saisie!\n</div>\n\n\n<hr/>\n<p>\n  Utilisation du filtrer\n  <strong>json</strong> pour afficher le contenu de la variable\n  <strong>cityList</strong>\n</p>\n<pre>\n{{cityList | json}}\n</pre>\n\n<!-- fin : Listing des villes -->\n\n<hr>");
 
 /***/ }),
 
@@ -377,17 +377,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _meteo_meteo_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./meteo/meteo.component */ "./src/app/meteo/meteo.component.ts");
 /* harmony import */ var _meteo_detail_meteo_detail_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./meteo-detail/meteo-detail.component */ "./src/app/meteo-detail/meteo-detail.component.ts");
-/* harmony import */ var _services_meteo_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./services/meteo.service */ "./src/app/services/meteo.service.ts");
 
  // <--  Ajouter la référence ici
-
 
 
 
@@ -413,20 +411,20 @@ const appRoutes = [
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["NgModule"])({
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
             _meteo_meteo_component__WEBPACK_IMPORTED_MODULE_7__["MeteoComponent"],
             _meteo_detail_meteo_detail_component__WEBPACK_IMPORTED_MODULE_8__["MeteoDetailComponent"]
         ],
         imports: [
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
+            ),
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
-            )
+            _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"] //<-- Ajouter la référence ici aussi
         ],
-        providers: [_services_meteo_service__WEBPACK_IMPORTED_MODULE_9__["MeteoService"]],
+        providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
     })
 ], AppModule);
@@ -483,6 +481,9 @@ let MeteoDetailComponent = class MeteoDetailComponent {
         this.meteoService.getMeteo(name)
             .then(meteo => this.meteo = meteo)
             .catch(fail => this.meteo = fail);
+        this.meteoService.getForcast(name)
+            .then(forcast => this.forcast = forcast)
+            .catch(fail => this.forcast = fail);
     }
 };
 MeteoDetailComponent.ctorParameters = () => [
@@ -602,6 +603,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MeteoItem", function() { return MeteoItem; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 
+// src\app\meteoItem.ts
 class MeteoItem {
 }
 
@@ -645,6 +647,34 @@ let MeteoService = class MeteoService {
                 console.error('Météo introuvable pour ' + name
                     + ' (' + json.message + ')');
                 return Promise.reject('Météo introuvable pour ' + name
+                    + ' (' + json.message + ')');
+            }
+        });
+    }
+    getForcast(name) {
+        console.log('from service', name);
+        let m = new _meteoItem__WEBPACK_IMPORTED_MODULE_2__["MeteoItem"]();
+        return fetch('https://api.openweathermap.org/data/2.5/forecast/?q=' + name + '&lang=fr&units=metric&appid=0ada432b59deb9716c357092c5f79be6')
+            .then(function (response) {
+            return response.json();
+        })
+            .then(function (json) {
+            if (json.cod == "200") {
+                let aujourdhui = json.list[0].dt_txt.split(' ')[0];
+                // filtrer 
+                json.list = json.list.reduce((a, d) => {
+                    if (!(a.find(i => i.dt_txt.split(' ')[0] == d.dt_txt.split(' ')[0])) && (d.dt_txt.split(' ')[0] !== aujourdhui)) {
+                        a.push(d);
+                    }
+                    return a;
+                }, []);
+                return Promise.resolve(json);
+            }
+            else {
+                m.weather = json;
+                console.error('Forcast introuvable pour ' + name
+                    + ' (' + json.message + ')');
+                return Promise.reject('Forcast introuvable pour ' + name
                     + ' (' + json.message + ')');
             }
         });
